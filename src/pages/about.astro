@@ -1,0 +1,227 @@
+---
+import Navbar from "../components/Navbar.astro";
+import '../styles/global.css'
+import ActivityCard from "../components/ActivityCard.astro";
+import Footer from "../components/Footer.astro";
+
+const seahawk_desc = "I am the current president of the Seahawk Cyber Club at my school, which is a CyberSecurity Club where we do various things such as competitions and learning."
+const progjam_desc = "ProgJam is a club which I participate in is called the ProgJam club, where we do programming activities where we have a prompt, and we make something that resembles said prompt."
+const middleschool_desc = 'An outside of school activity which I do is helping out with teaching Cybersecurity at a Middle School club, every thursday afterschool.' 
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>matees.net - about</title>
+	</head>
+	<body>
+		<Navbar />
+
+        <section class="bio">
+            <div>
+                <h1>The <span class="grad">Poem</span> about me</h1>
+                <p>
+                    Hi, I'm <span class="grad">Maytham</span>, and I love to code <br>
+                    I also enjoy <span class="grad">biking</span>, <span class="grad">badminton</span>, and trying new food on the go <br>
+                    Web development may not be my <span class="grad">cup of tea</span> <br>
+                    But I know it's important for my <span class="grad">future</span>, can't you see? <br>
+                    I lead a <span class="grad">club</span> at school and belong to a programming group <br>
+                    And I'm proud to be a Linux user, Windows be gone with a <span class="grad">whoop</span> <br>
+                    So that's a bit about me, keep scrolling to learn more <br>
+                    I hope you <span class="grad">enjoy</span> my profile, knock knock at my <span class="grad">door</span>! <br>
+                </p>
+            </div>
+            
+            <img src="about.png" alt="" width="400">
+        </section>
+
+
+        <section class="programming">
+            <img src="kid.png" alt="" width="400">
+
+            <div>
+                <h1>My <span class="grad">Programming</span> Journey </h1>
+                <p>
+                    At the age of <span class="grad">eleven</span>, in <span class="grad">sixth</span> grade <br>
+                    I discovered the <span class="grad">world of code</span>, a new frontier to <span class="grad">invade</span> <br>
+                    With <span class="grad">Roblox Studio</span>, I got my start <br>
+                    But then I paused, until eighth grade's <span class="grad">restart</span> <br>
+                    During the <span class="grad">pandemic</span>, I picked up the pace <br>
+                    Creating <span class="grad">Minecraft plugins</span>, a fun and creative space <br>
+                    I moved on to web development, and then to <span class="grad">C and Rust</span> <br>
+                    Now I love <span class="grad">systems</span> programming, it's a must <br>
+                    I create tools to make my life <span class="grad">easier</span>, it's true <br>
+                    Check out <span class="grad">my</span> <span class="grad">work</span>, I hope it <span class="grad">appeals</span> to you. <br>
+                </p>
+            </div>
+        </section>
+
+        <section class="biking">
+            <div>
+                <h1>My <span class="grad">Biking</span> joureny</h1>
+                <p>
+                    I'm not sure when I learned to ride a <span class="grad">bike</span> <br>
+                    But I got a ton of <span class="grad">injuries</span>, it wasn't easy, that's for sure <br>
+                    My <span class="grad">cousin</span> taught me and I <span class="grad">fell</span> a lot <br>
+                    But now I <span class="grad">love</span> to bike, it's one of my favorite things to do <br>
+                    <br>
+                    Before <span class="grad">daylight</span> savings ended, I'd ride to the park <br>
+                    But now it's dark when I get home, so biking's on hold for now <br>
+                    I want to go <span class="grad">mountain</span> biking <span class="grad">someday</span> <br>
+                    But for now, I'll keep <span class="grad">practicing</span> on the streets, until that day <span class="grad">arrives</span>. <br>
+                </p>
+            </div>
+
+            <img src="bike.png" alt="" width="400">
+        </section>
+
+        <section class="school">
+            <h1 class="grad" >School activites</h1>
+            <div class="container">
+                <ActivityCard title="Seahawk Cyber" description={seahawk_desc} image="seahawkcyber.png"/>
+                <ActivityCard title="ProgJam" description={progjam_desc} image="progjam.png"/>
+                <ActivityCard title="Middle School Club" description={middleschool_desc} image="midschool.png"/>
+            </div>
+        </section>
+
+        <section class="linux">
+            <img src="linux.png" alt="" width="400">
+
+            <div>
+                <h1>My <span class="grad">Linux</span> Journey </h1>
+                <p>
+                    The first time that I touched <span class="grad">Linux</span> was in <span class="grad">2021</span> <br>
+                    An online <span class="grad">friend</span> told me about it, and how <span class="grad">amazing</span> it was, too <br>
+                    I installed <span class="grad">Fedora</span>, heard it was good for <span class="grad">beginners</span> <br>
+                    But I didn't enjoy it much, I needed something more <span class="grad">within</span> <br>
+                    <br>
+                    So I started <span class="grad">distro</span> <span class="grad">hopping</span>, trying out every one <br>
+                    Until I landed on the <span class="grad">Arch</span> world, where everything was <span class="grad">simple</span> and <span class="grad">customizeable</span>, 
+                    <br> just like they said it'd be <br>
+                    Now I use <span class="grad">Manjaro</span>, and I absolutely <span class="grad">love</span> Linux <br>
+                    I even use it at <span class="grad">school</span>, my laptop's never been so quick <br>
+                </p>
+            </div>
+        </section>
+
+        <Footer />
+	</body>
+</html>
+
+<style>
+    .linux h1, .linux p {
+        text-align: right;
+    }
+
+    .linux div p {
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+
+    .linux div h1 {
+        font-size: 2rem;
+        text-align: right;
+    }
+
+    .linux img {
+        transform: rotate(-5deg);
+    }
+
+    .linux {
+        margin: 20vh 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .school .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 5vh;
+    }
+    .school {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 40vh;
+    }
+    .school h1 {
+        font-size: 2rem;
+    }
+
+    .biking {
+        margin: 0 10%;
+        margin-top: 30vh;
+        margin-bottom: 30vh;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .biking div h1 {
+        font-size: 2rem;
+    }
+
+    .biking div p {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .biking img {
+        transform: rotate(5deg)
+    }
+
+    .programming {
+        margin: 0 10%;
+        margin-top: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .programming h1, .programming p {
+        text-align: right;
+    }
+
+    .programming div p {
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+
+    .programming div h1 {
+        font-size: 2rem;
+    }
+
+    .programming img {
+        transform: rotate(-5deg);
+    }
+
+    .bio {
+        margin: 20vh 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bio img {
+        margin-right: 4%;
+        transform: rotate(5deg)
+    }
+    
+    .bio div p {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .bio div h1 {
+        font-size: 2rem;
+    }
+</style>

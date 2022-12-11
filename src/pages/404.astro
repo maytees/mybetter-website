@@ -1,0 +1,36 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/global.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>matees.net - 404</title>
+	</head>
+	<body>
+        <Navbar />
+        <div>
+            <h1 class="grad">Uh Oh...</h1>
+            <h1 class="grad">Page Not Found</h1>
+        </div>
+    
+        <Footer id="joe"/>
+	</body>
+</html>
+
+
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 25vh;
+        margin-bottom: 45vh;
+    }
+</style>
