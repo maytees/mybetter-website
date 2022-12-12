@@ -1,0 +1,58 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import BlogCard from "../components/BlogCard.astro";
+import '../styles/global.css'
+
+// From portfolio example
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+    (a,b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+)
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>matees.net - blog</title>
+	</head>
+	<body>
+        <Navbar />
+        
+        <main>
+            <div class="posts">
+                    {
+                        posts.map((post) => (
+                            <BlogCard class="post" title={post.frontmatter.title} description={post.frontmatter.description}
+                                image={post.frontmatter.heroImage} link={post.url}/>
+                        ))
+                    }
+            </div>
+        </main>
+
+        <Footer/>
+	</body>
+</html>
+
+<style>
+    h1 {
+        font-size: 2rem;
+    }
+    main {
+        margin: 10vh 10%;
+        margin-bottom: 26vh;
+    }
+    .posts {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    a {
+        font-size: 1.2rem;
+        color: #ff79c6;
+    }
+</style>
